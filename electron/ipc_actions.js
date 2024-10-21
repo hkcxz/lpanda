@@ -53,7 +53,7 @@ function runScript(scriptName,params){
     logger.info("run script:" + scriptName);
     if(fs.existsSync("./pscripts/init_env.py")){
         logger.info("dev env");
-        const pythonExecutable = path.join(__dirname, '../py/Scripts/python.exe');
+        const pythonExecutable = path.join(__dirname, '../venv/Scripts/python.exe');
         const scriptPath = path.join(__dirname, '../pscripts/' + scriptName +".py");
         params.unshift(scriptPath);
         return spawn(pythonExecutable, params);

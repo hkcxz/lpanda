@@ -9,7 +9,7 @@ function listFiles(dirPath,type) {
 }  
 
 function runBuild(scriptName,params){
-    const pythonExecutable = path.join(__dirname, '../py/Scripts/pyinstaller.exe');
+    const pythonExecutable = path.join(__dirname, '../venv/Scripts/pyinstaller.exe');
     const scriptPath = path.join(__dirname, "../pscripts/"+scriptName);
     params.unshift(scriptPath);
     return spawn(pythonExecutable, params);
